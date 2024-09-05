@@ -1,0 +1,33 @@
+@use 'variables';
+
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 80px;
+    text-align: center;
+
+    .header-logo {
+        width: 37px;
+        height: 37px;
+        margin-bottom: 16px;
+    }
+
+    .header-title {
+        color: variables.$color-white;
+        font-family: variables.$font-roboto-mono;
+        font-size: variables.$large-small-size;
+        line-height: variables.$large-height;
+        font-weight: variables.$large-size;
+        margin-bottom: 8px;
+    }
+
+    .header-subtitle {
+        color: variables.$color-white;
+        font-family: variables.$font-roboto;
+        font-size: variables.$medium-small-size;
+        line-height: variables.$medium-small-height;
+        font-weight: variables.$small-weight;
+        margin-bottom: 57px;
+    }
+}

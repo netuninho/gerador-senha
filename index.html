@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="dist/main.css">
+    <script src="src/scripts/main.js" defer></script>
+</head>
+<body class="container">
+    <header class="header">
+        <img src="src/assests/icons/unlock.svg" alt="Ícone de cadeado" class="header-logo">
+        <h1 class="header-title">Gerador de senhas</h1>
+        <h2 class="header-subtitle">Gere instantaneamente uma senha aleatória e segura</h2>
+    </header>
+
+    <main class="main-content">
+        <section class="password-generator">
+            <div class="password-display">
+                <div class="input-container">
+                    <label for="password" class="password-label">senha</label>
+                    <input type="text" id="password" readonly class="password-input" aria-label="Senha gerada">
+                </div>
+                <div class="button-container">
+                    <button onclick="copyPassword()" class="copy-button password-function" aria-label="Copiar senha">
+                        <img src="src/assests/icons/copy.svg" alt="Copiar senha" class="icon-copy">
+                    </button>
+                    <button onclick="generatePassword()" class="generate-button" aria-label="Gerar nova senha">
+                        <img src="src/assests/icons/refresh-cw.svg" alt="Gerar nova senha" class="icon-refresh">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="password-customization">
+            <h1 class="customization-title">Personalize sua senha</h1>
+        
+            <div class="customization-container">
+                <fieldset class="character-count">
+                    <legend class="section-title">Número de caracteres</legend>
+                    <input type="range" min="6" max="24" value="12" class="slider" id="slider-range">
+                    <p class="value-display" id="value-display" aria-live="polite">12</p>
+                </fieldset>
+            
+                <fieldset class="password-features">
+                    <legend class="section-title">Características da senha</legend>
+            
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input class="checkbox-input" id="lowercase" type="checkbox" name="option" value="uppercase" checked> 
+                            Letras maiúsculas
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input class="checkbox-input" id="uppercase" type="checkbox" name="option" value="lowercase" checked> 
+                            Letras minúsculas
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input class="checkbox-input" id="numbers" type="checkbox" name="option" value="numbers"> 
+                            Números
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input class="checkbox-input" id="symbols" type="checkbox" name="option" value="symbols">
+                             Símbolos
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </fieldset>
+            
+                <fieldset class="password-strength">
+                    <legend class="section-title">Força da senha</legend>
+            
+                    <div class="strength-bar">
+                        <div class="strength-level" id="weak"></div>
+                    </div>
+            
+                    <div class="strength-labels">
+                        <span class="strength-label">Fraco</span>
+                        <span class="strength-label">Médio</span>
+                        <span class="strength-label">Forte</span>
+                    </div>
+                </fieldset>
+            </div>
+        </section>
+        
+        <button class="copy-password password-function" onclick="copyPassword()">
+            Copiar senha
+        </button>
+    </main>
+
+    <script src="script/main.js"></script>
+</body>
+</html>

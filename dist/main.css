@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 80px;
+  text-align: center;
+}
+.header .header-logo {
+  width: 37px;
+  height: 37px;
+  margin-bottom: 16px;
+}
+.header .header-title {
+  color: #FFFFFF;
+  font-family: "Roboto Mono";
+  font-size: 32px;
+  line-height: 42px;
+  font-weight: 40px;
+  margin-bottom: 8px;
+}
+.header .header-subtitle {
+  color: #FFFFFF;
+  font-family: "Roboto";
+  font-size: 24px;
+  line-height: 23px;
+  font-weight: 400;
+  margin-bottom: 57px;
+}
+
+.container {
+  background-color: #0F021B;
+}
+@media screen and (max-width: 980px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.container .main-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.container .main-content .password-generator {
+  margin-bottom: 32px;
+}
+.container .main-content .password-generator .password-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2C1746;
+  border-bottom: 3px solid #FD58FF;
+  max-width: 1089px;
+  max-height: 111px;
+}
+@media screen and (min-width: 1024px) {
+  .container .main-content .password-generator .password-display {
+    width: 1089px;
+  }
+}
+.container .main-content .password-generator .password-display .input-container .password-label {
+  color: #8A87AA;
+  font-family: "Roboto";
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 400;
+  padding-left: 40px;
+}
+.container .main-content .password-generator .password-display .input-container .password-input {
+  border: none;
+  padding-left: 34px;
+  color: #FFFFFF;
+  font-family: "Roboto Mono";
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 52px;
+  background-color: #2C1746;
+}
+@media screen and (max-width: 980px) {
+  .container .main-content .password-generator .password-display .input-container .password-input {
+    font-size: 32px;
+  }
+}
+.container .main-content .password-generator .password-display .input-container .password-input:focus {
+  border: none;
+  outline: none;
+}
+.container .main-content .password-generator .password-display .button-container {
+  padding-right: 18px;
+}
+@media screen and (max-width: 1024px) {
+  .container .main-content .password-generator .password-display .button-container {
+    position: absolute;
+    right: 0;
+  }
+}
+.container .main-content .password-generator .password-display .button-container .copy-button, .container .main-content .password-generator .password-display .button-container .generate-button {
+  border: none;
+  cursor: pointer;
+  background-color: #2C1746;
+}
+@media screen and (min-width: 1024px) {
+  .container .main-content .password-generator .password-display .button-container .copy-button, .container .main-content .password-generator .password-display .button-container .generate-button {
+    padding: 20px;
+  }
+}
+.container .main-content .password-customization {
+  border: 1px solid #694A81;
+  margin-bottom: 36px;
+  border-radius: 5px;
+}
+@media screen and (min-width: 1024px) {
+  .container .main-content .password-customization {
+    width: 1089px;
+  }
+}
+.container .main-content .password-customization .customization-title {
+  color: #D7D5EB;
+  font-family: "Roboto Mono";
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 500;
+  padding: 35px 40px;
+}
+.container .main-content .password-customization .customization-container {
+  padding: 0 40px;
+  display: flex;
+  gap: 64px;
+  justify-content: space-between;
+}
+@media screen and (max-width: 980px) {
+  .container .main-content .password-customization .customization-container {
+    flex-direction: column;
+  }
+}
+.container .main-content .password-customization .customization-container .character-count .section-title, .container .main-content .password-customization .customization-container .password-features .section-title, .container .main-content .password-customization .customization-container .password-strength .section-title {
+  color: #8A87AA;
+  font-family: "Roboto";
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.container .main-content .password-customization .customization-container .character-count .slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #FFFFFF 35%, #2C1746 35%);
+  margin-bottom: 24px;
+}
+.container .main-content .password-customization .customization-container .character-count .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.container .main-content .password-customization .customization-container .character-count .slider::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.container .main-content .password-customization .customization-container .character-count .value-display {
+  background-color: #2C1746;
+  border-radius: 5px;
+  border: 1px solid #694A81;
+  color: #8A87AA;
+  font-family: "Roboto";
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  width: 50px;
+  padding: 12px 13px;
+}
+@media screen and (min-width: 1024px) {
+  .container .main-content .password-customization .customization-container .password-features {
+    margin-bottom: 72px;
+  }
+}
+.container .main-content .password-customization .customization-container .password-features .checkbox-group {
+  display: flex;
+  flex-direction: column;
+}
+.container .main-content .password-customization .customization-container .password-features .checkbox-group .checkbox-label {
+  color: #8A87AA;
+  font-family: "Roboto";
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 500;
+  white-space: nowrap;
+  padding-left: 36px;
+  margin-bottom: 16px;
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.container .main-content .password-customization .customization-container .password-features .checkbox-group .checkbox-label .checkbox-input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.container .main-content .password-customization .customization-container .password-features .checkbox-group .checkbox-label .checkbox-input[type=checkbox][type=checkbox]:checked + .checkmark {
+  background-color: #FFFFFF;
+}
+.container .main-content .password-customization .customization-container .password-features .checkbox-group .checkbox-label .checkbox-input[type=checkbox][type=checkbox]:checked + .checkmark:after {
+  opacity: 1;
+}
+.container .main-content .password-customization .customization-container .password-features .checkbox-group .checkbox-label .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background-color: #2C1746;
+  border: 1px solid #694A81;
+  border-radius: 4px;
+}
+.container .main-content .password-customization .customization-container .password-features .checkbox-group .checkbox-label .checkmark:after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  border: solid #0F021B;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  top: 4px;
+  left: 8px;
+  opacity: 0;
+}
+@media screen and (max-width: 980px) {
+  .container .main-content .password-customization .customization-container .password-strength {
+    margin-bottom: 30px;
+  }
+}
+.container .main-content .password-customization .customization-container .password-strength .strength-bar {
+  width: 300px;
+  height: 32px;
+  background-color: #2C1746;
+  margin-bottom: 14px;
+}
+.container .main-content .password-customization .customization-container .password-strength .strength-bar .strength-level {
+  height: 32px;
+}
+.container .main-content .password-customization .customization-container .password-strength .strength-bar .strength-level#weak {
+  width: 90px;
+  background-color: #E71B32;
+}
+.container .main-content .password-customization .customization-container .password-strength .strength-bar .strength-level#medium {
+  width: 169px;
+  background-color: #FAF408;
+}
+.container .main-content .password-customization .customization-container .password-strength .strength-bar .strength-level#strong {
+  background-color: #00FF85;
+}
+.container .main-content .password-customization .customization-container .password-strength .strength-labels {
+  color: #8A87AA;
+  font-family: "Roboto";
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+.container .main-content .copy-password {
+  margin-bottom: 90px;
+  background-color: #FD58FF;
+  border: none;
+  color: #0F021B;
+  font-family: "Roboto";
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 500;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map */

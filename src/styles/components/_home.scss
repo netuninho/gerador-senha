@@ -1,0 +1,293 @@
+@use 'variables';
+
+@mixin range() {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: variables.$color-white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container {
+    background-color: variables.$color-deep-blue;
+
+    @media screen and (max-width: 980px) {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .password-generator {
+            margin-bottom: 32px;
+
+            .password-display {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: variables.$color-dark-purple;
+                border-bottom: 3px solid variables.$color-bright-pink;
+                max-width: 1089px;
+                max-height: 111px;
+
+                @media screen and (min-width: 1024px) {
+                    width: 1089px;
+                }
+
+                .input-container {
+                    .password-label {
+                        color: variables.$color-light-gray;
+                        font-family: variables.$font-roboto;
+                        font-size: variables.$extra-small-size;
+                        line-height: variables.$medium-small-height;
+                        font-weight: variables.$small-weight;
+                        padding-left: 40px;
+                    }
+    
+                    .password-input {
+                        border: none;
+                        padding-left: 34px;
+                        color: variables.$color-white;
+                        font-family: variables.$font-roboto-mono;
+                        font-size: variables.$large-size;
+                        font-weight: variables.$medium-weight;
+                        line-height: variables.$extra-large-height;
+                        background-color: variables.$color-dark-purple;
+
+                        @media screen and (max-width: 980px) {
+                            font-size: variables.$large-small-size;
+                        }
+    
+                        &:focus {
+                            border: none;
+                            outline: none;
+                        }
+                    }
+                }
+
+                .button-container {
+                    padding-right: 18px;    
+
+                    @media screen and (max-width: 1024px) {
+                        position: absolute;
+                        right: 0;
+                    }
+
+                    .copy-button, .generate-button {
+                        border: none;                        ;
+                        cursor: pointer;
+                        background-color: variables.$color-dark-purple;
+
+                        @media screen and (min-width: 1024px) {
+                            padding: 20px
+                        }
+                    }
+                }
+            }
+        }
+
+        .password-customization {
+            border: 1px solid variables.$color-medium-purple;
+            margin-bottom: 36px;
+            border-radius: 5px;
+
+            @media screen and (min-width: 1024px) {
+                width: 1089px;
+            }
+
+            .customization-title {
+                color: variables.$color-soft-lavender;
+                font-family: variables.$font-roboto-mono;
+                font-size: variables.$medium-size;
+                line-height: variables.$medium-large-height;
+                font-weight: variables.$medium-weight;
+                padding: 35px 40px;
+            }
+
+            .customization-container {
+                padding: 0 40px;
+                display: flex;
+                gap: 64px;
+                justify-content: space-between;
+
+                @media screen and (max-width: 980px) {
+                    flex-direction: column;
+                }
+
+                .character-count, .password-features, .password-strength {
+                    .section-title {
+                        color: variables.$color-light-gray;
+                        font-family: variables.$font-roboto;
+                        font-size: variables.$medium-small-size;
+                        line-height: variables.$medium-height;
+                        font-weight: variables.$medium-weight;
+                        margin-bottom: 24px;
+                    }
+                }
+
+                .character-count {
+                    .slider {
+                        -webkit-appearance: none;
+                        appearance: none; 
+                        width: 100%;
+                        height: 8px;
+                        border-radius: 5px;
+                        background: linear-gradient(90deg, variables.$color-white 35%, variables.$color-dark-purple 35%);
+                        margin-bottom: 24px;
+
+                        &::-webkit-slider-thumb {
+                            @include range    
+                        }
+
+                        &::-moz-range-thumb {
+                            @include range    
+                        }
+
+                    }
+
+                    .value-display {
+                        background-color: variables.$color-dark-purple;
+                        border-radius: 5px;
+                        border: 1px solid variables.$color-medium-purple;
+                        color: variables.$color-light-gray;
+                        font-family: variables.$font-roboto;
+                        font-size: variables.$medium-small-size;
+                        line-height: variables.$medium-height;
+                        font-weight: variables.$medium-weight;
+                        width: 50px;
+                        padding: 12px 13px;
+                    }
+                }
+
+                .password-features {
+                    @media screen and (min-width: 1024px) {
+                        margin-bottom: 72px;
+                    }
+
+                    .checkbox-group {
+                        display: flex;
+                        flex-direction: column;
+                        
+                        .checkbox-label {
+                            color: variables.$color-light-gray;
+                            font-family: variables.$font-roboto;
+                            font-size: variables.$extra-small-size;
+                            line-height: variables.$small-height;
+                            font-weight: variables.$medium-weight;
+                            white-space: nowrap;
+                            padding-left: 36px;
+                            margin-bottom: 16px;
+
+                            position: relative;
+                            display: inline-block;
+                            width: 24px;
+                            height: 24px;
+                            cursor: pointer;
+
+                            .checkbox-input[type="checkbox"] {
+                                opacity: 0;
+                                position: absolute;
+                                width: 0;
+                                height: 0;
+
+                                &[type="checkbox"]:checked + .checkmark {
+                                    background-color: variables.$color-white;
+                                
+                                    &:after {
+                                      opacity: 1;
+                                    }
+                                }
+                            }
+
+                            .checkmark {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 24px;
+                                height: 24px;
+                                background-color: variables.$color-dark-purple;
+                                border: 1px solid variables.$color-medium-purple;
+                                border-radius: 4px;
+
+                                &:after {
+                                    content: "";
+                                    position: absolute;
+                                    width: 5px;
+                                    height: 10px;
+                                    border: solid variables.$color-deep-blue;
+                                    border-width: 0 2px 2px 0;
+                                    transform: rotate(45deg);
+                                    top: 4px;
+                                    left: 8px;
+                                    opacity: 0;
+                                  }
+                            }
+                        }
+                    }
+                }
+
+                .password-strength {
+                    @media screen and (max-width:980px) {
+                        margin-bottom: 30px;
+                    }
+
+                    .strength-bar {
+                        width: 300px;
+                        height: 32px;
+                        background-color: variables.$color-dark-purple;
+                        margin-bottom: 14px;
+
+                        .strength-level {
+                            height: 32px;
+    
+                            &#weak {
+                                width: 90px;
+                                background-color: variables.$weak-color;
+                            }
+    
+                            &#medium {
+                                width: 169px;
+                                background-color: variables.$medium-color;
+                            }
+    
+                            &#strong {
+                                background-color: variables.$strong-color;
+                            }
+                        }
+                    } 
+
+                    .strength-labels {
+                        color: variables.$color-light-gray;
+                        font-family: variables.$font-roboto;
+                        font-size: variables.$extra-small-size;
+                        line-height: variables.$small-height;
+                        font-weight: variables.$medium-weight;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+
+        .copy-password {
+            margin-bottom: 90px;
+            background-color: variables.$color-bright-pink;
+            border: none;
+            color: variables.$color-deep-blue;
+            font-family: variables.$font-roboto;
+            font-size: variables.$extra-small-size;
+            line-height: variables.$small-height;
+            font-weight: variables.$medium-weight;
+            padding: 10px 12px;
+            cursor: pointer;
+
+        }
+    }
+}
