@@ -6,9 +6,9 @@
 <p align="center">
  <a href="#objetivo">Objetivo</a> •
  <a href="#funcionalidades"> Funcionalidades</a> • 
- <a href="#instalação">Instalação</a> • 
  <a href="#uso">Uso</a> • 
- <a href="#tecnologias">Tecnologias</a> • 
+ <a href="#instalação">Instalação</a> • 
+ <a href="#tecnologias">Tecnologias</a> 
 </p>
 
 ### Objetivo
@@ -29,6 +29,13 @@ Para determinar a força da senha, é seguido um padrão específico que conside
 -**Fraca**: Nenhum campo selecionado, apenas letras maiúsculas selecionado, apenas letras minúsculas selecionado, ambos letras maiúsculas e minúsculas selecionado.
 -**Média**: Letras maiúsculas, minúsculas e mais algum campo selecionado.
 -**Forte**: Todos os campos selecionados.
+
+### Uso
+
+1. **Escolha as características**: Marque as opções desejadas para a senha (letras maiúsculas, minúsculas, números, símbolos).
+2. **Defina o comprimento da senha**: Ajuste o tamanho da senha se necessário.
+3. **Gere a senha**: Clique no botão "Gerar Senha" para criar uma nova senha.
+4. **Copie a senha**: Utilize o botão "Copiar Senha" para copiar a senha gerada para a área de transferência.
 
 ### Instalação
 
@@ -54,13 +61,6 @@ Para executar este projeto localmente, siga estas etapas:
     ```
 
 5. **Abra o arquivo HTML em um navegador**.
-
-### Uso
-
-1. **Escolha as características**: Marque as opções desejadas para a senha (letras maiúsculas, minúsculas, números, símbolos).
-2. **Defina o comprimento da senha**: Ajuste o tamanho da senha se necessário.
-3. **Gere a senha**: Clique no botão "Gerar Senha" para criar uma nova senha.
-4. **Copie a senha**: Utilize o botão "Copiar Senha" para copiar a senha gerada para a área de transferência.
 
 ###  Tecnologias
 
